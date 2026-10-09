@@ -31,7 +31,11 @@ public class Contest {
         if (animal2.isActive() && animal1.isActive()) {
             int damage = animal2.attack();
 
-            animal1.setEnergy(Math.max(0, animal1.getEnergy() - damage));
+            animal1.setEnergy(animal1.getEnergy() - damage);
+
+            if (animal2.getEnergy() - damage < 0){
+                animal2.setEnergy(0);
+            }
 
             System.out.println(animal2.getName() + " angriber " + animal1.getName() + " for " + damage + "! (" + animal1.getName()
                     + " har " + animal1.getEnergy() + " energi tilbage)"

@@ -23,7 +23,9 @@ public class Animal {
         return energy > 0;
     }
 
-    public abstract int attack();
+    public int attack() {
+        return 0;
+    }
 
     @Override
     public String toString(){

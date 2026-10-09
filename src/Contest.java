@@ -41,7 +41,6 @@ public class Contest {
                     + " har " + animal1.getEnergy() + " energi tilbage)"
             );
         }
-
         System.out.println();
     }
 
